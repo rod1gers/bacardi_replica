@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 const Header: React.FC = () => {
     const [selected, setSelected] = useState('Home');
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -12,7 +13,7 @@ const Header: React.FC = () => {
             setIsScrolled(false);
           }
         };
-    
+
         window.addEventListener('scroll', handleScroll);
         return () => {
           window.removeEventListener('scroll', handleScroll);
@@ -37,13 +38,24 @@ const Header: React.FC = () => {
     
           {/* Mobile Menu */}
           <div className="md:hidden">
-            <button className="text-black" onClick={() => setSelected(selected)}>
+            <button className="text-black" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {/* Mobile menu icon */}
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
               </svg>
             </button>
           </div>
+
+          {/* Mobile Navigation Links */}
+          {isMenuOpen && (
+            <div className="absolute top-16 left-0 right-0 bg-white shadow-md md:hidden flex flex-col items-center space-y-2 py-4">
+              <a href="#" className={`text-black ${selected === 'Home' ? 'font-bold' : ''} text-xl`} onClick={() => { setSelected('Home'); setIsMenuOpen(false); }}>Home</a>
+              <a href="#" className={`text-black ${selected === 'Flavours' ? 'font-bold' : ''} text-xl`} onClick={() => { setSelected('Flavours'); setIsMenuOpen(false); }}>Flavours</a>
+              <a href="#" className={`text-black ${selected === 'Products' ? 'font-bold' : ''} text-xl`} onClick={() => { setSelected('Products'); setIsMenuOpen(false); }}>Products</a>
+              <a href="#" className={`text-black ${selected === 'About Us' ? 'font-bold' : ''} text-xl`} onClick={() => { setSelected('About Us'); setIsMenuOpen(false); }}>About Us</a>
+              <a href="#" className={`text-black ${selected === 'Contact Us' ? 'font-bold' : ''} text-xl`} onClick={() => { setSelected('Contact Us'); setIsMenuOpen(false); }}>Contact Us</a>
+            </div>
+          )}
     
           {/* Call to Action */}
           <div className="hidden md:block">

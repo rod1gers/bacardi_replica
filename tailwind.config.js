@@ -8,6 +8,7 @@ module.exports = {
       '8xl': '10rem',
       '7xl': '9rem',
       '6xl': '8rem',
+      '5.8xl': '6rem',
       '2xl': '1rem',
     },
     extend: {},

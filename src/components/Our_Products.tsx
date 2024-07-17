@@ -36,8 +36,8 @@ const Our_Products = () => {
         <div className="text-white w-full text-8xl md:text-7xl font-semibold relative -left-80 -top-5 z-10">
           <span className="text-shadow-black">BREEZER</span>
         </div>
-        <div className="relative ml-28 right-60 lg:right-0 top-40 w-full md:w-auto md:-left-72 md:top-24 md:right-0 sm:-left-72 sm:top-44">
-          <img src={require('../images/fruit.png')} alt="Fruit Logo" className="w-24 md:ml-4 absolute -left-56 -top-24 z-20" />
+        <div className="relative ml-28 right-80 lg:right-0 top-44 w-full md:w-auto md:-left-72 md:top-24 md:right-0 sm:-left-72 sm:top-44">
+          <img src={require('../images/fruit.png')} alt="Fruit Logo" className="w-24 md:ml-4 absolute right-32 -top-24 z-20" />
           <div className="text-black text-2xl font-bold mb-4 md:mb-0">Our Product</div>
           <p className="text-black text-left w-64 mt-4 text-2xl md:w-64 sm:w-64 lg:w-96">
             Bacardi Breezer, Broozer for short, is a fruit-based alcoholic <br />
@@ -46,7 +46,7 @@ const Our_Products = () => {
         </div>
       </div>
 
-      <div className="relative mt-8">
+      <div className="relative mt-28">
         <input
           type="text"
           value={searchQuery}
@@ -74,7 +74,7 @@ const Our_Products = () => {
                   <p>Size: {drink.strMeasure1}</p>
                   <p className="font-bold ">Price: ₹{drink.idDrink}.00/-</p>
                 </div>
-                <button className="bg-gray-100 hover:bg-gray-200 relative -top-11 text-black px-4 py-2 rounded border border-black self-end mt-2">
+                <button className="bg-gray-100 hover:bg-gray-200 relative -top-0 text-black px-4 py-2 rounded border border-black self-end mt-2">
                   Add to Cart
                 </button>
               </div>

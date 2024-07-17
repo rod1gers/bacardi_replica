@@ -27,7 +27,7 @@ const Products_listings = () => {
   return (
     <div className="container mx-auto " style={{ paddingLeft: '100px', paddingRight: "100px" }}>
       <div className='relative'>
-        <div className="absolute flex-row justify-between items-center md:flex-row md:-top-28 sm:-top-24 -top-24">
+        <div className="absolute flex-row justify-between items-center md:flex-row md:-top-28 sm:-top-24 -top-28">
           <img src={require('../images/orangeFruit.png')} alt="Breezer Logo" className="w-24 md:ml-4" />
           <h1 className="text-2xl font-bold mb-4 md:mb-0">Breezer Flavoure</h1>
         </div>
@@ -37,7 +37,7 @@ const Products_listings = () => {
       </div>  
         
 
-      <p className="text-left mt-4 text-2xl">
+      <p className="text-left mt-60 top-9 text-2xl">
         Bacardi Breezer, Broozer for short, is a fruit-based alcoholic <br /> drink which comes in many flavours.
       </p>
       <div className="flex w-full">
