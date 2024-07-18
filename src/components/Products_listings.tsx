@@ -31,7 +31,7 @@ const Products_listings = () => {
           <img src={require('../images/orangeFruit.png')} alt="Breezer Logo" className="w-24 md:ml-4" />
           <h1 className="text-2xl font-bold mb-4 md:mb-0">Breezer Flavoure</h1>
         </div>
-        <div className="text-white lg:text-8xl md:text-6xl font-semibold text-center absolute md:-right-96 -right-72 -top-5 z-10">
+        <div className="text-white sm:block hidden lg:text-8xl md:text-6xl font-semibold text-center absolute md:-right-96 -right-72 -top-5 z-10">
           <span className="text-shadow-black">BREEZER</span>
         </div>
       </div>  

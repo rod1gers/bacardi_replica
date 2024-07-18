@@ -27,7 +27,7 @@ const Hero_section = () => {
       </div>
 
       <div>
-        <img src={require('../images/black_fruit.png')} alt='black fruit' className='absolute left-96' />
+        <img src={require('../images/black_fruit.png')} alt='black fruit' className='absolute left-96 sm:block hidden' />
       </div>
 
       <div className="relative w-full">
